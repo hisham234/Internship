@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href = "Stylesheet1.css"/>
+    <title>React App</title>
+  </head>
+  <body>
+    
+    <div class="registerBody">
+        <div class="bg-image-Login"></div>
+           <div class="registerWrap">
+           
+           <div class="registerForm displayForm">
+             
+               <h1>Account Details</h1>
+
+               <div>
+                    <p class="pLabels">First Name:</p>
+                    <p class="pData" id="fName"></p>
+                </div>
+
+               <div>
+                    <p class="pLabels">Last Name:</p>
+                    <p class="pData" id="lName"></p>
+                </div>
+
+               <div>
+                    <p class="pLabels">Email address:</p>
+                    <p class="pData" id="email"></p>
+                </div>
+
+                <div>
+                    <p class="pLabels">Date Of Birth:</p>
+                    <p class="pData" id="DOB"></p>  
+                </div>
+
+               <div>
+                    <p class="pLabels">Choose Country:</p>
+                    <p class="pData" id="country"></p>
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+     document.getElementById("fName").innerHTML = localStorage.getItem("fName");
+     document.getElementById("lName").innerHTML = localStorage.getItem("lName");
+     document.getElementById("email").innerHTML = localStorage.getItem("email");
+     document.getElementById("DOB").innerHTML = localStorage.getItem("DOB");
+     document.getElementById("country").innerHTML = localStorage.getItem("country");
+    </script>
+  </body>
+</html>

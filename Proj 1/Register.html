@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href = "Stylesheet1.css"/>
+    <title>React App</title>
+  </head>
+  <body>
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  
+
+    <div class="registerBody">
+        <div class="bg-image-Login"></div>
+           <div class="registerWrap">
+           
+           <div class="registerForm">
+           <form action="Display.html">
+             
+               <h1>Create Account</h1>
+
+             
+               <p htmlFor="fName">First Name</p>
+               <input type="text" id="fname" placeholder="Enter first name" pattern="[a-zA-Z]+" title="Name can't contain letters or empty space" maxLength="14" minLength="3" required ></input>
+               <p htmlFor="lName">Last Name</p>
+               <input type="text" id="lname" placeholder="Enter last name" pattern="[a-zA-Z]+" title="Name can't contain letters or empty space" maxLength="14" minLength="3" required></input>
+               
+               <p htmlFor="email">Email address</p>
+               <input type="email" id="email" placeholder="Enter email"  maxLength="30" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Incorrect email format" required></input>
+              
+               <p htmlFor="password">Password</p>
+               <input type="password" id="password" placeholder="Enter password" pattern=".{8,}" title="Eight or more characters required"required></input>
+              
+               <p htmlFor="confirmPassword">Confirm Password</p>
+               <input type="password" id="confirmPassword" placeholder="Re-Enter password" required></input>
+
+               <p htmlFor="date">Date Of Birth</p>
+               <input type="date" name="ddd" id="DOB" min='1950-01-01' max='2010-12-31' placeholder="Re-Enter password" required></input>
+  
+               <p htmlFor="Country">Choose Country</p>
+               <select id="country"required>
+                <option value="" disabled selected>Select</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Turkey">Turkey</option>
+                <option value="United States">United States</option>
+                
+                
+             </select>
+                          
+               <button class="primary" type="submit" value="Submit" onclick="return Validate()">
+                 Register
+               </button>
+             
+           </form>
+        </div>
+        </div>
+    </div>
+
+    <script >       
+     function Validate() {
+      var fName, lName, email,dob, country;
+    
+     fName=  document.getElementById("fname");
+     lName=  document.getElementById("lname");
+     email=  document.getElementById("email");
+     dob =   document.getElementById("DOB");
+     country=  document.getElementById("country");
+
+     
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        
+
+    
+    
+  
+     localStorage.setItem("fName", fName.value);
+     localStorage.setItem("lName", lName.value);
+     localStorage.setItem("email", email.value);
+     localStorage.setItem("DOB", dob.value);
+     localStorage.setItem("country", country.value);
+     return true;
+    
+    }
+    </script>
+  </body>
+</html>

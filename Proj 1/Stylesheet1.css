@@ -1,0 +1,197 @@
+body{
+background-color: rgb(66, 2, 66);
+}
+
+.registerBody{
+    position: relative;
+    display: table;
+    height: auto;
+    min-height: 85%;
+    display: grid;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    margin: 0px;
+}
+.registerWrap {
+    filter: blur(0px);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-Wrap: Wrap;
+}
+
+.bg-image-Login{
+    position:absolute; top:0px; right:0px; bottom:0px; left:0px;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px);
+ }
+
+.registerForm {
+    padding: 40px 15% 30px 15%;
+   
+  }
+
+  .displayForm{
+    padding-bottom: 5%;
+  }
+  
+  .registerForm:nth-child(1){
+    flex: 30%;
+
+  }
+  
+  .registerForm:nth-child(2){
+    flex: 45%;
+  }
+  
+  .registerForm:nth-child(3){
+    flex: 25%;
+    padding: 0;
+  }
+  
+  .registerForm h1{
+   text-align:center;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .registerForm button{
+        line-height: 10px;
+        height: 8%;
+        color: #fff;
+        font-size: 15px;
+        background: red;
+        cursor: pointer;
+        width: 40%;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        margin-top: 4%;
+        margin-bottom: 10%;
+        margin-left: 32%;
+  }
+
+
+  .registerForm input::placeholder {
+    color: #fff;
+  }
+
+  .registerForm input, .registerForm select {
+    width: 100%;
+    height: 55px;
+    margin-top: 0.5rem;
+    margin-bottom: 2%;
+    border: 1px solid #fff;
+    outline: none;
+    padding: 12px 20px;
+    background: transparent;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+  }
+
+  select option{
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .registerForm p{
+    margin-bottom: 1%;
+  }
+
+  .pLabels{
+    width: 30%;
+    float: left;
+  }
+  .pData{
+    width: 70%;
+    float: right;
+  }
+  
+  .displayForm p{
+    margin-top: 5%;
+  }
+
+  input, select {
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  input:focus, textarea:focus {
+      color: black;
+    border: 3px solid black;
+  }
+  textarea:focus::placeholder{
+      color: black;
+  }
+  input:focus::placeholder{
+    color: black;
+}
+  input:hover {
+    border: 3px solid black;
+    color: black
+    
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  @media only screen and (max-width: 900px) {
+  .registerWrap{
+    width: 50%;
+  }
+  
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .registerForm:nth-child(1){
+      flex: 50%;
+    }
+  
+    .registerForm:nth-child(2){
+      flex: 50%;
+    }
+  
+    .registerForm:nth-child(3){
+      flex: 100%;
+    }
+    .registerWrap{
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .registerForm:nth-child(1){
+      flex: 50%;
+    }
+  
+    .registerForm:nth-child(2){
+      flex: 50%;
+    }
+  
+    .registerForm:nth-child(3){
+      flex: 100%;
+    }
+  }
